@@ -169,7 +169,7 @@ img {
 
 #mu-header {
   background-color: #fff;
-  box-shadow: inset 0px -6px 0px #bd8453;
+  box-shadow: inset 0px -4px 0px #bd8453;
   position: fixed;
   left: 0;
   top: 0;
@@ -183,9 +183,9 @@ img {
  NAVBAR SECTION
 ====================*/
 .mu-main-navbar {
-  background-color: transparent;
+  background-color: white;
   border: none;
-  padding: 20px 0;
+  padding: 0; 
   border-radius: 0;
   margin-bottom: 0;
   -webkit-transition: all 0.5s;
@@ -226,10 +226,7 @@ img {
   display: inline-block;
   font-weight: 700;
   font-size: 35px;  
-  padding: 0;
-  margin-top: 16px;
-  height: 34px;
-  width: 180px;
+
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -238,12 +235,18 @@ img {
 }
 
 .mu-main-navbar .navbar-header .navbar-brand img {
-  margin-top: -10px;
+  margin-top: 0;
+  height: 120px; 
+  max-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 0;
 }
 
 
 .mu-main-navbar .navbar-header .navbar-brand-small {
-  height: 20px;
+  height: 50px;
   margin-top: 16px;
   width: 105px;
 }
@@ -297,6 +300,12 @@ img {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  background: url('assets/img/slider/hero.jpeg') center center/cover no-repeat;
+  /* Pfad anpassen, falls das Bild woanders liegt! */
+  display: flex;
+  align-items: flex-start; /* optional für besseren Look */
 }
 
 /* Container für Bild und Inhalt */
@@ -406,6 +415,8 @@ img {
   padding-top: 30px;
   padding-left: 15px;
   width: 100%;
+  font-size: medium;
+  line-height: 1.8;
 }
 
 .mu-about-us-right ul {
@@ -539,133 +550,68 @@ img {
 /*==================
  MENU ITEM SECTION
 ====================*/
-
-#mu-restaurant-menu {
-  display: inline;
-  float: left;
+ #mu-restaurant-menu {
+  display: block;
   width: 100%;
   padding: 100px 0;
+  text-align: center;
+  color: white;
 }
 
 .mu-restaurant-menu-area {
-  display: inline;
-  float: left;
+  display: block;
   width: 100%;
 }
+.hero-btn a{
+  color: white;
+}
 
+.hero-btn:hover a {
+  color: #990000;            /* Text beim Hover in Rot */
+}
+/* 
 .mu-restaurant-menu-content {
-  display: inline;
-  float: left;
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 15px;
 }
 
 .mu-restaurant-menu {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  border: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-flex;
+  gap: 20px; 
+  list-style: none;
 }
 
 .mu-restaurant-menu li {
-  display: inline-block;
-  float: none;
+  margin: 0;
 }
 
 .mu-restaurant-menu li a {
-  font-family: "Poppins", sans-serif; /* Gleiche Schrift wie andere Texte */
-  text-transform: uppercase; /* Alle Buchstaben groß */
-  letter-spacing: 1px; /* Leicht größere Abstände für edlen Look */
-  font-size: 15px;
-  border-radius: 0;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: #fff;
-  font-size: 18px;
-  margin: 0 15px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  background-color: #c0392b;
+  padding: 12px 25px; 
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
 }
 
-.mu-restaurant-menu li a:hover,
-.mu-restaurant-menu .active a,
-.mu-restaurant-menu .active a:hover,
-.mu-restaurant-menu .active a:focus {
-  background-color: #FFF;
+.mu-restaurant-menu li a:hover {
+  background-color: #a93226;
+  color: #fff;
 }
 
-.mu-tab-content-area {
-  display: inline;
-  float: left;
-  width: 100%;
-  padding: 50px 0;
-}
-
-.mu-tab-content-left {
-  display: inline;
-  float: left;
-  padding-right: 15px;
-  width: 100%;
-}
-
-.mu-tab-content-right {
-  display: inline;
-  float: left;
-  padding-left: 15px;
-  width: 100%;
-}
-
-.mu-menu-item-nav li {
-  border-bottom: 1px dashed #ccc;
-  display: inline;
-  float: left;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  width: 100%;
-}
-
-.mu-menu-item-nav li:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-
-.mu-menu-item-nav li .media .media-left {
-  width: 110px;
-  height: 110px;
-}
-
-.mu-menu-item-nav li .media .media-left a,
-.mu-menu-item-nav li .media .media-left a img {
-  display: block;
-  width: 110px;
-  height: 110px;
-}
-
-.mu-menu-item-nav li .media .media-body .media-heading {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.mu-menu-item-nav li .media .media-body .media-heading a {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.mu-menu-item-nav li .media .media-body .mu-menu-price {
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  line-height: 20px;
-}
-
-.mu-menu-item-nav li .media .media-body p {
-  margin-top: 10px;
-  font-size: 14px;
-}
+.mu-restaurant-menu li a:focus,
+.mu-restaurant-menu li a:active,
+.mu-restaurant-menu li a:visited {
+  background-color: #610f06;
+  color: #fff;
+  outline: none;
+}  */
 
 /*==================
 RESERVATION SECTION
@@ -964,7 +910,7 @@ RESERVATION SECTION
   right: 0;
   bottom: 0;
   text-align: center;
-  padding-top: 28%;
+  padding-top: 50%; 
   opacity: 0;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
@@ -1473,7 +1419,7 @@ RESERVATION SECTION
 
 @media (max-width: 1199px) {
 
-  .mu-main-navbar .mu-main-nav li a {
+  /* .mu-main-navbar .mu-main-nav li a {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -1483,7 +1429,7 @@ RESERVATION SECTION
     left: 5%;
     top: 15%;
     right: 5%;
-  }
+  } */
 
   .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-small-title {
     font-size: 40px;
@@ -1498,14 +1444,6 @@ RESERVATION SECTION
     padding: 0;
   }
 
-  .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0 50px;
-  }
-
-  .mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social {
-    padding: 23px 5px;
-  }
-
   .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
   padding-top: 26%;
   }
@@ -1516,7 +1454,7 @@ RESERVATION SECTION
 
 @media (max-width: 991px) {
 
-
+/* 
   .mu-main-navbar .mu-main-nav li a {
     padding-left: 5px;
     padding-right: 5px;
@@ -1525,7 +1463,7 @@ RESERVATION SECTION
 
   .mu-top-slider-content .mu-reservation-btn {
     display: none;
-  }
+  } */
 
   .mu-about-us-left,
   .mu-reservation-form {
@@ -1545,13 +1483,6 @@ RESERVATION SECTION
     padding-top: 22%;
   }
 
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0 60px;
-  }
-
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p::before {
-    top: 40%;
-  }
 
 
 }
@@ -1570,7 +1501,16 @@ RESERVATION SECTION
   }
 
   #mu-header {
-    padding: 0 15px;
+  background: rgba(255,255,255,0.04);  /* fast durchsichtig */
+  box-shadow: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background 0.2s;
+  backdrop-filter: blur(2px);
   }
 
   .navbar-default .navbar-toggle {
@@ -1608,6 +1548,20 @@ RESERVATION SECTION
   .mu-opening-hour .time {
       font-size: 13px;
   }
+
+  .mu-restaurant-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mu-restaurant-menu li a {
+    width: 80%;
+    text-align: center;
+  }
+
+  .mu-restaurant-menu li {
+    margin-bottom: 12px;
+  }
    
 }
 
@@ -1619,28 +1573,21 @@ RESERVATION SECTION
     background-color: #fff;
   }
 
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu li a {
-    font-size: 16px;
-    margin: 0 5px;
-  }
-
   #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
     padding-top: 18%;
   }
-
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0;
+  .mu-restaurant-menu {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p {
-    font-size: 16px;
-    line-height: 30px;
+  .mu-restaurant-menu li a {
+    width: 80%;
+    text-align: center;
   }
 
-  #mu-chef .mu-chef-area .mu-chef-content .mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social a {
-    margin: 0 3px;
-    padding: 3px 0;
-    width: 30px;
+  .mu-restaurant-menu li {
+    margin-bottom: 12px;
   }
 
 }
@@ -1684,10 +1631,6 @@ RESERVATION SECTION
     margin-bottom: 0;
   }
 
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0;
-  }
-
   #mu-subscription .mu-subscription-area .mu-subscription-form input[type="text"] {
     width: 100%;
     margin-bottom: 20px;
@@ -1716,6 +1659,15 @@ RESERVATION SECTION
 
   #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu li {
     margin-bottom: 10px;
+  }
+  .mu-restaurant-menu li a {
+     font-size: 10px; 
+    /* padding: 10px 20px; */
+    text-align: center;
+  }
+  .mu-restaurant-menu {
+    flex-direction: column;
+    align-items: center;
   }
   
   
@@ -1771,26 +1723,6 @@ RESERVATION SECTION
 
   #mu-footer .mu-footer-area .mu-footer-social a {
     font-size: 18px;
-  }
-
-  .mu-menu-item-nav li {
-    text-align: center;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-tab-content-area .mu-menu-item-nav li .media .media-left {
-    height: auto;
-    width: 100%;
-    margin-right: 0;
-    float: left;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-tab-content-area .mu-menu-item-nav li .media .media-left a{
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-tab-content-area .mu-menu-item-nav li .media .media-left a img {
-    display: inline-block;
   }
 
   #mu-map {
